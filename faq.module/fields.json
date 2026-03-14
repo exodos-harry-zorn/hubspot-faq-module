@@ -1,6 +1,6 @@
 [
   {
-    "id": "11d71de7-38ee-4bca-9946-992241cdfdd3",
+    "id": "64fe7b39-608b-4000-b0d7-0373c217c286",
     "name": "faqs",
     "label": "FAQs",
     "required": false,
@@ -11,7 +11,7 @@
     },
     "children": [
       {
-        "id": "c4a21c7e-3174-4b5a-83e1-dc4c6a4944da",
+        "id": "ee4b5670-e964-4239-a13c-af60121ba7e6",
         "name": "question",
         "label": "Question",
         "required": false,
@@ -19,12 +19,127 @@
         "type": "text"
       },
       {
-        "id": "ef1d0d35-1acb-455f-a477-a26d5a2f7b3b",
+        "id": "3f0e56a5-00d8-4d4d-a03f-70f941d0006e",
         "name": "answer",
         "label": "Answer",
         "required": false,
         "locked": false,
         "type": "richtext"
+      }
+    ]
+  },
+  {
+    "id": "1d443c7e-0d44-410b-9e92-71936cd95c8c",
+    "name": "design",
+    "label": "Design Settings",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "children": [
+      {
+        "id": "10c5932f-2e40-4113-8f0f-2f32eeec2b7e",
+        "name": "border_style",
+        "label": "Border Style",
+        "required": false,
+        "locked": false,
+        "type": "choice",
+        "choices": [
+          [
+            "none",
+            "No Lines (Clean Minimal)"
+          ],
+          [
+            "bottom",
+            "Bottom Lines Only (Classic)"
+          ],
+          [
+            "box",
+            "Full Boxed (Card Style)"
+          ]
+        ]
+      },
+      {
+        "id": "1f92e1a0-1a54-4871-9b50-2e49066fd033",
+        "name": "spacing",
+        "label": "Spacing (Padding)",
+        "required": false,
+        "locked": false,
+        "type": "choice",
+        "choices": [
+          [
+            "compact",
+            "Compact"
+          ],
+          [
+            "normal",
+            "Normal"
+          ],
+          [
+            "relaxed",
+            "Relaxed (More Spacing)"
+          ]
+        ]
+      },
+      {
+        "id": "9e91393b-45ba-43de-924c-059ae682e225",
+        "name": "colors",
+        "label": "Colors",
+        "required": false,
+        "locked": false,
+        "type": "group",
+        "children": [
+          {
+            "id": "33aa4a30-ef8c-4707-8cea-5ad2a6719dbe",
+            "name": "question_text",
+            "label": "Question Text Color",
+            "required": false,
+            "locked": false,
+            "type": "color"
+          },
+          {
+            "id": "cb33dcf0-e162-4a3b-8785-3024b1a82a42",
+            "name": "answer_text",
+            "label": "Answer Text Color",
+            "required": false,
+            "locked": false,
+            "type": "color"
+          },
+          {
+            "id": "8bb700fb-31f9-4407-b3a5-4ef14b56ceff",
+            "name": "border_color",
+            "label": "Border Color",
+            "required": false,
+            "locked": false,
+            "type": "color"
+          },
+          {
+            "id": "db4843fe-d6ad-497e-8ad9-f7607a622358",
+            "name": "icon_color",
+            "label": "Icon Color",
+            "required": false,
+            "locked": false,
+            "type": "color"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "d5b850a0-0839-4489-8bdb-40c9a02234eb",
+    "name": "seo",
+    "label": "SEO Settings",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "children": [
+      {
+        "id": "8bdc3e21-bced-4237-b5ce-b4ca8af01d81",
+        "name": "enable_schema",
+        "label": "Enable FAQ Schema Markup (JSON-LD)",
+        "required": false,
+        "locked": false,
+        "type": "boolean",
+        "display": "checkbox"
       }
     ]
   }
