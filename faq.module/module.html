@@ -11,7 +11,7 @@
     margin: 0 auto;
     
     /* Layout & Width */
-    max-width: {{ container.max_width|escape|default('800px') }};
+    max-width: {{ container.max_width|default('800') }}px;
     
     /* Margin overrides (horizontal is auto to center) */
     {% if container.module_spacing.margin.top %}margin-top: {{ container.module_spacing.margin.top.value }}{{ container.module_spacing.margin.top.units }};{% else %}margin-top: 40px;{% endif %}

@@ -68,11 +68,13 @@
       {
         "id": "8d983eaf-ed2b-4e99-a971-4d8b0aac7a1b",
         "name": "max_width",
-        "label": "Maximum Width (e.g. 800px, 100%, 40rem)",
+        "label": "Maximum Width (px)",
         "required": false,
         "locked": false,
-        "type": "text",
-        "default": "800px"
+        "type": "number",
+        "default": 800,
+        "display": "text",
+        "suffix": "px"
       },
       {
         "id": "7393d9e6-8a2f-41c1-91e0-38b4eec1ae94",
