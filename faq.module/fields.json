@@ -1,0 +1,140 @@
+[
+  {
+    "name": "faqs",
+    "label": "FAQs",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "children": [
+      {
+        "name": "question",
+        "label": "Question",
+        "required": true,
+        "locked": false,
+        "type": "text",
+        "default": "What is the typical deployment time?"
+      },
+      {
+        "name": "answer",
+        "label": "Answer",
+        "required": true,
+        "locked": false,
+        "type": "richtext",
+        "default": "Deployment usually takes less than 15 minutes to complete across your entire environment."
+      }
+    ],
+    "occurrence": {
+      "min": null,
+      "max": null,
+      "sorting_label_field": "question",
+      "default": 3
+    },
+    "default": [
+      {
+        "question": "How quickly can we deploy this solution?",
+        "answer": "Our agentless deployment allows you to scan your entire infrastructure in minutes, not days."
+      },
+      {
+        "question": "Is this suitable for enterprise environments?",
+        "answer": "Yes. Our platform scales automatically to handle millions of workloads and complex, multi-cloud architectures."
+      },
+      {
+        "question": "How does pricing work?",
+        "answer": "Pricing is based on the number of workloads and nodes in your environment. Contact our sales team for a custom quote."
+      }
+    ]
+  },
+  {
+    "name": "design",
+    "label": "Design Settings",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "children": [
+      {
+        "name": "border_style",
+        "label": "Border Style",
+        "required": false,
+        "locked": false,
+        "type": "choice",
+        "choices": [
+          { "label": "No Lines (Clean Minimal)", "value": "none" },
+          { "label": "Bottom Lines Only (Classic)", "value": "bottom" },
+          { "label": "Full Boxed (Card Style)", "value": "box" }
+        ],
+        "default": "bottom"
+      },
+      {
+        "name": "spacing",
+        "label": "Spacing (Padding)",
+        "required": false,
+        "locked": false,
+        "type": "choice",
+        "choices": [
+          { "label": "Compact", "value": "compact" },
+          { "label": "Normal", "value": "normal" },
+          { "label": "Relaxed (More Spacing)", "value": "relaxed" }
+        ],
+        "default": "normal"
+      },
+      {
+        "name": "colors",
+        "label": "Colors",
+        "required": false,
+        "locked": false,
+        "type": "group",
+        "children": [
+          {
+            "name": "question_text",
+            "label": "Question Text Color",
+            "required": false,
+            "locked": false,
+            "type": "color",
+            "default": { "color": "#1A1A1A", "opacity": 100 }
+          },
+          {
+            "name": "answer_text",
+            "label": "Answer Text Color",
+            "required": false,
+            "locked": false,
+            "type": "color",
+            "default": { "color": "#4A4A4A", "opacity": 100 }
+          },
+          {
+            "name": "border_color",
+            "label": "Border Color",
+            "required": false,
+            "locked": false,
+            "type": "color",
+            "default": { "color": "#E5E7EB", "opacity": 100 }
+          },
+          {
+            "name": "icon_color",
+            "label": "Icon Color",
+            "required": false,
+            "locked": false,
+            "type": "color",
+            "default": { "color": "#3B82F6", "opacity": 100 }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "seo",
+    "label": "SEO Settings",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "children": [
+      {
+        "name": "enable_schema",
+        "label": "Enable FAQ Schema Markup (JSON-LD)",
+        "required": false,
+        "locked": false,
+        "type": "boolean",
+        "default": true
+      }
+    ]
+  }
+]

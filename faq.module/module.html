@@ -1,0 +1,59 @@
+{% set design = module.design %}
+{% set seo = module.seo %}
+{% set faqs = module.faqs %}
+
+{# Container wrapper for scoping styles and dynamic CSS variables #}
+<div class="hs-faq-module faq-style-{{ design.border_style }} faq-spacing-{{ design.spacing }}" 
+     style="
+       --faq-q-color: {{ design.colors.question_text.color }};
+       --faq-a-color: {{ design.colors.answer_text.color }};
+       --faq-border-color: {{ design.colors.border_color.color }};
+       --faq-icon-color: {{ design.colors.icon_color.color }};
+     ">
+  
+  <div class="faq-accordion" role="presentation">
+    {% for faq in faqs %}
+      <div class="faq-item">
+        <h3>
+          <button class="faq-button" aria-expanded="false" aria-controls="faq-content-{{ loop.index }}">
+            <span class="faq-question">{{ faq.question }}</span>
+            <span class="faq-icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+            </span>
+          </button>
+        </h3>
+        <div id="faq-content-{{ loop.index }}" class="faq-content" aria-hidden="true" style="max-height: 0px;">
+          <div class="faq-answer-inner">
+            {{ faq.answer }}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+{# JSON-LD Schema for SEO #}
+{% if seo.enable_schema and faqs|length > 0 %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for faq in faqs %}
+        {
+          "@type": "Question",
+          "name": "{{ faq.question|striptags|escape }}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{ faq.answer|striptags|escape }}"
+          }
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  </script>
+{% endif %}

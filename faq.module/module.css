@@ -1,0 +1,144 @@
+/* --- HubSpot FAQ Module CSS --- */
+
+.hs-faq-module {
+  --faq-transition: 0.3s ease-out;
+  --faq-padding: 1.5rem 0; /* Normal Default */
+  font-family: inherit; /* Uses theme font */
+}
+
+/* Structural Styles */
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faq-item {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.faq-item h3 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Accordion Buttons */
+.faq-button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--faq-padding);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--faq-q-color, #1a1a1a);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  transition: color var(--faq-transition);
+}
+
+.faq-button:hover {
+  opacity: 0.8;
+}
+
+.faq-button:focus-visible {
+  outline: 2px solid var(--faq-icon-color);
+  outline-offset: 4px;
+}
+
+.faq-question {
+  flex: 1;
+  padding-right: 1.5rem;
+}
+
+/* Plus/Minus Icon SVG Animation */
+.faq-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: var(--faq-icon-color, #3B82F6);
+  transition: transform var(--faq-transition);
+}
+
+.faq-button[aria-expanded="true"] .faq-icon {
+  transform: rotate(45deg);
+}
+
+/* Accordion Content (Transition) */
+.faq-content {
+  overflow: hidden;
+  transition: max-height var(--faq-transition), opacity var(--faq-transition);
+  opacity: 0;
+  color: var(--faq-a-color, #4A4A4A);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* The inner wrap allows us to pad the content without breaking max-height transitions */
+.faq-answer-inner {
+  padding-bottom: var(--faq-padding);
+  padding-top: 0;
+}
+
+/* When expanded */
+.faq-button[aria-expanded="true"] + .faq-content {
+  opacity: 1;
+}
+
+/* --- Style Combinations --- */
+
+/* 1. Border Settings */
+.faq-style-none .faq-item {
+  border: none;
+}
+
+.faq-style-bottom .faq-item {
+  border-bottom: 1px solid var(--faq-border-color, #E5E7EB);
+}
+.faq-style-bottom .faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-style-box .faq-accordion {
+  gap: 1rem;
+}
+.faq-style-box .faq-item {
+  border: 1px solid var(--faq-border-color, #E5E7EB);
+  border-radius: 8px;
+  background-color: #fff; /* Could be customized, keeping crisp white for SaaS */
+}
+.faq-style-box .faq-button {
+  padding: var(--faq-padding) 1.5rem;
+}
+.faq-style-box .faq-answer-inner {
+  padding: 0 1.5rem var(--faq-padding) 1.5rem;
+}
+
+/* 2. Spacing Settings */
+.faq-spacing-compact {
+  --faq-padding: 1rem 0;
+}
+.faq-style-box.faq-spacing-compact {
+  --faq-padding: 1rem;
+}
+
+.faq-spacing-normal {
+  --faq-padding: 1.5rem 0;
+}
+.faq-style-box.faq-spacing-normal {
+  --faq-padding: 1.5rem;
+}
+
+.faq-spacing-relaxed {
+  --faq-padding: 2rem 0;
+}
+.faq-style-box.faq-spacing-relaxed {
+  --faq-padding: 2rem;
+}
