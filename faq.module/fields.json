@@ -5,7 +5,8 @@
     "required": false,
     "locked": false,
     "type": "text",
-    "default": "Frequently Asked Questions"
+    "default": "Frequently Asked Questions",
+    "display_width": "half_width"
   },
   {
     "name": "faqs",
@@ -50,7 +51,8 @@
         "question": "How does pricing work?",
         "answer": "Pricing is based on the number of workloads."
       }
-    ]
+    ],
+    "display_width": null
   },
   {
     "name": "container",
@@ -154,7 +156,8 @@
         ],
         "default": "left"
       }
-    ]
+    ],
+    "display_width": null
   },
   {
     "name": "design",
@@ -263,7 +266,8 @@
           }
         ]
       }
-    ]
+    ],
+    "display_width": null
   },
   {
     "name": "seo",
@@ -281,7 +285,8 @@
         "display": "checkbox",
         "default": true
       }
-    ]
+    ],
+    "display_width": null
   },
   {
     "name": "heading_styles",
@@ -379,6 +384,7 @@
           }
         }
       }
-    ]
+    ],
+    "display_width": null
   }
 ]
