@@ -46,8 +46,19 @@
   opacity: 0.7;
 }
 
+.faq-button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.faq-button:active {
+  outline: 2px solid var(--faq-icon-color) !important;
+  outline-offset: -2px;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
 .faq-button:focus-visible {
-  outline: 2px solid var(--faq-icon-color);
+  outline: 2px solid var(--faq-icon-color) !important;
   outline-offset: -2px;
 }
 
