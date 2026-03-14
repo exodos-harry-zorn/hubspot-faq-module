@@ -1,5 +1,6 @@
 [
   {
+    "id": "e395c089-fbf8-4396-8475-2e7f11ba2fd3",
     "name": "faqs",
     "label": "FAQs",
     "required": false,
@@ -7,32 +8,47 @@
     "type": "group",
     "children": [
       {
+        "id": "c65d1925-0b8a-4fdb-915f-1bec658f227c",
         "name": "question",
         "label": "Question",
         "required": true,
         "locked": false,
         "type": "text",
-        "default": "What is the typical deployment time?",
-        "id": "3698fdcf-0010-43fe-8d46-fac48ceb17c9"
+        "default": "What is the typical deployment time?"
       },
       {
+        "id": "17ddf171-6085-41a1-b204-fde229dd6071",
         "name": "answer",
         "label": "Answer",
         "required": true,
         "locked": false,
         "type": "richtext",
-        "default": "Deployment usually takes less than 15 minutes to complete across your entire environment.",
-        "id": "ed2bde18-ae4d-4571-8b1f-4b449a6a9006"
+        "default": "Deployment usually takes less than 15 minutes to complete across your entire environment."
       }
     ],
     "occurrence": {
       "min": null,
       "max": null,
-      "sorting_label_field": "question"
+      "sorting_label_field": "c65d1925-0b8a-4fdb-915f-1bec658f227c",
+      "default": 3
     },
-    "id": "65b22319-f5f1-4ad9-8706-f1b46950af69"
+    "default": [
+      {
+        "c65d1925-0b8a-4fdb-915f-1bec658f227c": "How quickly can we deploy this solution?",
+        "17ddf171-6085-41a1-b204-fde229dd6071": "Our agentless deployment allows you to scan your entire infrastructure in minutes, not days."
+      },
+      {
+        "c65d1925-0b8a-4fdb-915f-1bec658f227c": "Is this suitable for enterprise environments?",
+        "17ddf171-6085-41a1-b204-fde229dd6071": "Yes. Our platform scales automatically to handle millions of workloads and complex, multi-cloud architectures."
+      },
+      {
+        "c65d1925-0b8a-4fdb-915f-1bec658f227c": "How does pricing work?",
+        "17ddf171-6085-41a1-b204-fde229dd6071": "Pricing is based on the number of workloads and nodes in your environment. Contact our sales team for a custom quote."
+      }
+    ]
   },
   {
+    "id": "b9b227cf-309f-4b5f-b176-f6aac3587f1b",
     "name": "design",
     "label": "Design Settings",
     "required": false,
@@ -40,6 +56,7 @@
     "type": "group",
     "children": [
       {
+        "id": "c36cf46d-45a4-4b60-83ed-e66d178659e4",
         "name": "border_style",
         "label": "Border Style",
         "required": false,
@@ -59,10 +76,10 @@
             "value": "box"
           }
         ],
-        "default": "bottom",
-        "id": "f18c1152-3f8e-4f35-b1c8-1330cfabae5f"
+        "default": "bottom"
       },
       {
+        "id": "5425c144-27fb-4870-a987-905a313d0fe5",
         "name": "spacing",
         "label": "Spacing (Padding)",
         "required": false,
@@ -82,10 +99,10 @@
             "value": "relaxed"
           }
         ],
-        "default": "compact",
-        "id": "caeb217b-1685-471b-9826-3c980bbbe2ec"
+        "default": "compact"
       },
       {
+        "id": "19e46f2a-f1cf-486a-ac68-aa32a60a78de",
         "name": "colors",
         "label": "Colors",
         "required": false,
@@ -93,6 +110,7 @@
         "type": "group",
         "children": [
           {
+            "id": "8ec9bda2-17b8-4360-82a7-924c8c1e9c59",
             "name": "question_text",
             "label": "Question Text Color",
             "required": false,
@@ -101,10 +119,10 @@
             "default": {
               "color": "#1A1A1A",
               "opacity": 100
-            },
-            "id": "f87f5012-e710-4035-b912-c87230afc1c2"
+            }
           },
           {
+            "id": "bff76a61-c9de-401b-b9c9-fad542d81bad",
             "name": "answer_text",
             "label": "Answer Text Color",
             "required": false,
@@ -113,10 +131,10 @@
             "default": {
               "color": "#4A4A4A",
               "opacity": 100
-            },
-            "id": "4aaebc6c-7a31-4bf3-8c27-a02430a21cae"
+            }
           },
           {
+            "id": "9c4a239d-dcf2-4d01-bb9f-84daeea9bef8",
             "name": "border_color",
             "label": "Border Color",
             "required": false,
@@ -125,10 +143,10 @@
             "default": {
               "color": "#D1D5DB",
               "opacity": 100
-            },
-            "id": "25490e9c-5142-42e1-a601-00b2a362c063"
+            }
           },
           {
+            "id": "5884c152-806d-48f5-a6ef-1451fd0bbe69",
             "name": "icon_color",
             "label": "Icon Color",
             "required": false,
@@ -137,16 +155,14 @@
             "default": {
               "color": "#1A1A1A",
               "opacity": 100
-            },
-            "id": "ef18e644-a1eb-4982-b5f3-c855873297e9"
+            }
           }
-        ],
-        "id": "28f5459a-b73f-4d16-8c16-782bfa37758e"
+        ]
       }
-    ],
-    "id": "b30de149-7054-4eb9-a185-1cafc4322dff"
+    ]
   },
   {
+    "id": "400a73ad-b468-4aea-9f88-93bf261e60b9",
     "name": "seo",
     "label": "SEO Settings",
     "required": false,
@@ -154,15 +170,14 @@
     "type": "group",
     "children": [
       {
+        "id": "988f557c-0182-4d64-bc26-cc1c23fed405",
         "name": "enable_schema",
         "label": "Enable FAQ Schema Markup (JSON-LD)",
         "required": false,
         "locked": false,
         "type": "boolean",
-        "default": true,
-        "id": "23b9bca7-4a23-4487-aa13-08a6e1b9d965"
+        "default": true
       }
-    ],
-    "id": "e6648221-7608-4dce-af09-ef4a00a9cf8e"
+    ]
   }
 ]

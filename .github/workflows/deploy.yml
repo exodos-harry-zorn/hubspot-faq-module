@@ -15,7 +15,7 @@ jobs:
 
       - name: Deploy Module to HubSpot
         env:
-          HUBSPOT_PORTAL_ID: ${{ secrets.HUBSPOT_PORTAL_ID }}
+          HUBSPOT_ACCOUNT_ID: ${{ secrets.HUBSPOT_PORTAL_ID }}
           HUBSPOT_PERSONAL_ACCESS_KEY: ${{ secrets.HUBSPOT_PERSONAL_ACCESS_TOKEN }}
         run: |
-          npx --yes --package=@hubspot/cli@^7 --call='hs upload "faq.module" "11_Bytes child/modules/static modules/FAQ lean.module" --use-env'
+          npx --yes --package=@hubspot/cli@^7 --call='hs cms upload "faq.module" "11_Bytes child/modules/static modules/FAQ lean.module" --use-env'
