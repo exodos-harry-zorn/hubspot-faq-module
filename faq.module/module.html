@@ -1,3 +1,5 @@
+{% set heading_text = module.heading_text %}
+{% set heading_styles = module.heading_styles %}
 {% set design = module.design %}
 {% set container = module.container %}
 {% set seo = module.seo %}
@@ -32,6 +34,23 @@
     {% endif %}
   }
 
+  {% if heading_text %}
+  .hs-faq-heading-{{ name }} {
+    text-align: {{ heading_styles.alignment|default('left') }};
+    color: {{ heading_styles.color.color|default('#1a1a1a') }};
+    /* Resets */
+    margin: 0;
+    padding: 0;
+    /* Custom Spacing */
+    {% if heading_styles.spacing.margin.top %}margin-top: {{ heading_styles.spacing.margin.top.value }}{{ heading_styles.spacing.margin.top.units }};{% endif %}
+    {% if heading_styles.spacing.margin.bottom %}margin-bottom: {{ heading_styles.spacing.margin.bottom.value }}{{ heading_styles.spacing.margin.bottom.units }};{% else %}margin-bottom: 24px;{% endif %}
+    {% if heading_styles.spacing.padding.top %}padding-top: {{ heading_styles.spacing.padding.top.value }}{{ heading_styles.spacing.padding.top.units }};{% endif %}
+    {% if heading_styles.spacing.padding.bottom %}padding-bottom: {{ heading_styles.spacing.padding.bottom.value }}{{ heading_styles.spacing.padding.bottom.units }};{% endif %}
+    {% if heading_styles.spacing.padding.left %}padding-left: {{ heading_styles.spacing.padding.left.value }}{{ heading_styles.spacing.padding.left.units }};{% endif %}
+    {% if heading_styles.spacing.padding.right %}padding-right: {{ heading_styles.spacing.padding.right.value }}{{ heading_styles.spacing.padding.right.units }};{% endif %}
+  }
+  {% endif %}
+
   /* Responsive Adjustments for Mobile */
   @media (max-width: 768px) {
     .hs-faq-container-{{ name }} {
@@ -46,6 +65,12 @@
 {% end_require_css %}
 
 <div class="hs-faq-container-{{ name }}">
+  
+  {% if heading_text %}
+    {% set tag = heading_styles.tag|default('h2') %}
+    <{{ tag }} class="hs-faq-heading-{{ name }}">{{ heading_text|escape }}</{{ tag }}>
+  {% endif %}
+
   <div class="hs-faq-module faq-style-{{ design.border_style|default('bottom') }} faq-spacing-{{ design.spacing|default('compact') }}" 
        style="
          --faq-q-color: {{ design.colors.question_text.color|default('#1a1a1a') }};

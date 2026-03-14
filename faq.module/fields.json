@@ -1,5 +1,14 @@
 [
   {
+    "id": "ffde799f-a88a-4cc8-a4b7-0ec579e3b228",
+    "name": "heading_text",
+    "label": "Heading Text",
+    "required": false,
+    "locked": false,
+    "type": "text",
+    "default": "Frequently Asked Questions"
+  },
+  {
     "id": "b24933f0-ca90-4c03-a77b-3ba2f684f7de",
     "name": "faqs",
     "label": "FAQs",
@@ -290,6 +299,109 @@
         "type": "boolean",
         "display": "checkbox",
         "default": true
+      }
+    ]
+  },
+  {
+    "id": "1c2e19af-0234-4945-878d-7b75971df41f",
+    "name": "heading_styles",
+    "label": "Heading Styles",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "tab": "STYLE",
+    "children": [
+      {
+        "id": "a4387e7e-7bd7-4e34-8286-b9a1ba78f57c",
+        "name": "tag",
+        "label": "Heading Format",
+        "required": false,
+        "locked": false,
+        "type": "choice",
+        "display": "select",
+        "choices": [
+          [
+            "h1",
+            "H1"
+          ],
+          [
+            "h2",
+            "H2"
+          ],
+          [
+            "h3",
+            "H3"
+          ],
+          [
+            "h4",
+            "H4"
+          ],
+          [
+            "h5",
+            "H5"
+          ],
+          [
+            "h6",
+            "H6"
+          ],
+          [
+            "p",
+            "Paragraph (p)"
+          ]
+        ],
+        "default": "h2"
+      },
+      {
+        "id": "00d6c6f5-3376-4d45-bf29-e3fa2a931fe8",
+        "name": "alignment",
+        "label": "Text Alignment",
+        "required": false,
+        "locked": false,
+        "type": "choice",
+        "display": "select",
+        "choices": [
+          [
+            "left",
+            "Left"
+          ],
+          [
+            "center",
+            "Center"
+          ],
+          [
+            "right",
+            "Right"
+          ]
+        ],
+        "default": "left"
+      },
+      {
+        "id": "1a3bd67e-e9d5-49d5-9599-3f157e4fcd9f",
+        "name": "color",
+        "label": "Text Color",
+        "required": false,
+        "locked": false,
+        "type": "color",
+        "default": {
+          "color": "#1a1a1a",
+          "opacity": 100
+        }
+      },
+      {
+        "id": "b907f32b-4be0-4103-9422-95c372c86901",
+        "name": "spacing",
+        "label": "Padding & Margin",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "margin": {
+            "bottom": {
+              "value": 24,
+              "units": "px"
+            }
+          }
+        }
       }
     ]
   }
