@@ -4,6 +4,7 @@
   --faq-transition: 0.3s ease-out;
   --faq-padding: 1rem 0; /* Default to compact */
   font-family: inherit;
+  text-align: left;
 }
 
 .faq-accordion {
@@ -96,6 +97,11 @@
 .faq-answer-inner {
   padding-bottom: var(--faq-padding);
   padding-top: 0;
+  text-align: left;
+}
+
+.faq-answer-inner p {
+  text-align: left;
 }
 
 .hs-faq-module .faq-content[aria-hidden="false"] {
