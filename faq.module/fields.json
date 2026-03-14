@@ -7,9 +7,6 @@
     "locked": false,
     "type": "group",
     "occurrence": {
-      "min": null,
-      "max": null,
-      "sorting_label_field": null,
       "default": 3
     },
     "children": [
@@ -28,119 +25,6 @@
         "required": false,
         "locked": false,
         "type": "richtext"
-      }
-    ]
-  },
-  {
-    "id": "fd114f8c-ec98-41e5-8c08-a6f19fc66a00",
-    "name": "design",
-    "label": "Design Settings",
-    "required": false,
-    "locked": false,
-    "type": "group",
-    "children": [
-      {
-        "id": "75a184a5-c606-41bf-8eb0-f4d144a27c33",
-        "name": "border_style",
-        "label": "Border Style",
-        "required": false,
-        "locked": false,
-        "type": "choice",
-        "display": "select",
-        "choices": [
-          {
-            "label": "No Lines",
-            "value": "none"
-          },
-          {
-            "label": "Bottom Lines Only",
-            "value": "bottom"
-          },
-          {
-            "label": "Full Boxed",
-            "value": "box"
-          }
-        ]
-      },
-      {
-        "id": "cac59d45-57f6-4838-8305-0fd93460e01f",
-        "name": "spacing",
-        "label": "Spacing",
-        "required": false,
-        "locked": false,
-        "type": "choice",
-        "display": "select",
-        "choices": [
-          {
-            "label": "Compact",
-            "value": "compact"
-          },
-          {
-            "label": "Normal",
-            "value": "normal"
-          }
-        ]
-      },
-      {
-        "id": "cb779c94-e867-4047-b7f2-92fd351ee138",
-        "name": "colors",
-        "label": "Colors",
-        "required": false,
-        "locked": false,
-        "type": "group",
-        "children": [
-          {
-            "id": "bd5ea0b8-14dd-4f46-8134-ff368fd5f183",
-            "name": "question_text",
-            "label": "Question Text Color",
-            "required": false,
-            "locked": false,
-            "type": "color"
-          },
-          {
-            "id": "5fe4908c-cf6f-479a-984f-11854bf4f4c7",
-            "name": "answer_text",
-            "label": "Answer Text Color",
-            "required": false,
-            "locked": false,
-            "type": "color"
-          },
-          {
-            "id": "59ce5219-2de5-4e63-9147-90b38ab91a16",
-            "name": "border_color",
-            "label": "Border Color",
-            "required": false,
-            "locked": false,
-            "type": "color"
-          },
-          {
-            "id": "85a75be2-f4fa-4d7f-9c89-1f58403e92d7",
-            "name": "icon_color",
-            "label": "Icon Color",
-            "required": false,
-            "locked": false,
-            "type": "color"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "87b8a5ac-bc73-4068-81c0-baa3502f36ca",
-    "name": "seo",
-    "label": "SEO Settings",
-    "required": false,
-    "locked": false,
-    "type": "group",
-    "children": [
-      {
-        "id": "fd511b2b-5b5c-453b-8b9a-7afa3caa1d96",
-        "name": "enable_schema",
-        "label": "Enable FAQ Schema Markup",
-        "required": false,
-        "locked": false,
-        "type": "boolean",
-        "display": "checkbox"
       }
     ]
   }
