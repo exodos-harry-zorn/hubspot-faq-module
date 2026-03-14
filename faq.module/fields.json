@@ -17,16 +17,19 @@
         "label": "Question",
         "required": false,
         "locked": false,
-        "type": "text"
+        "type": "text",
+        "id": "c22e902c-0e59-4f60-bc2c-b712d0adef34"
       },
       {
         "name": "answer",
         "label": "Answer",
         "required": false,
         "locked": false,
-        "type": "richtext"
+        "type": "richtext",
+        "id": "695bcd13-f172-4e9f-8792-33ce07edab7b"
       }
-    ]
+    ],
+    "id": "3fbe438f-dfe2-4ffc-83f9-d4e65799286c"
   },
   {
     "name": "design",
@@ -54,7 +57,8 @@
             "value": "box",
             "label": "Full Boxed (Card Style)"
           }
-        ]
+        ],
+        "id": "a1455652-57a2-4403-bb6f-9b0e4a024a4e"
       },
       {
         "name": "spacing",
@@ -75,7 +79,8 @@
             "value": "relaxed",
             "label": "Relaxed (More Spacing)"
           }
-        ]
+        ],
+        "id": "b7c1a530-4b1e-4119-aa53-a778f4e46095"
       },
       {
         "name": "colors",
@@ -89,32 +94,38 @@
             "label": "Question Text Color",
             "required": false,
             "locked": false,
-            "type": "color"
+            "type": "color",
+            "id": "8a1d30e1-f5bf-40e8-a11f-71c4fc7da004"
           },
           {
             "name": "answer_text",
             "label": "Answer Text Color",
             "required": false,
             "locked": false,
-            "type": "color"
+            "type": "color",
+            "id": "417f15dd-e8fc-49a3-b17f-18e6e08253d7"
           },
           {
             "name": "border_color",
             "label": "Border Color",
             "required": false,
             "locked": false,
-            "type": "color"
+            "type": "color",
+            "id": "adf42556-c850-4e07-85f6-673495bd0c17"
           },
           {
             "name": "icon_color",
             "label": "Icon Color",
             "required": false,
             "locked": false,
-            "type": "color"
+            "type": "color",
+            "id": "97fe1ee2-9848-435e-bac2-564c92355351"
           }
-        ]
+        ],
+        "id": "73a06280-3b3f-46a8-99fb-dbbafa0f0a11"
       }
-    ]
+    ],
+    "id": "67a7d056-260e-48bd-902a-54f9bd20102e"
   },
   {
     "name": "seo",
@@ -128,8 +139,10 @@
         "label": "Enable FAQ Schema Markup (JSON-LD)",
         "required": false,
         "locked": false,
-        "type": "boolean"
+        "type": "boolean",
+        "id": "f39ad9ac-e614-4089-8a15-aa3240b7310d"
       }
-    ]
+    ],
+    "id": "4bb63195-c664-4d2b-9bf6-675202b45637"
   }
 ]
