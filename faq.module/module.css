@@ -43,6 +43,7 @@
   font-size: inherit;
   font-weight: inherit;
   transition: color var(--faq-transition);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .faq-button:hover {
@@ -55,14 +56,14 @@
 }
 
 .faq-button:active {
-  outline: 2px solid var(--faq-icon-color) !important;
-  outline-offset: -2px;
+  outline: none !important;
   background-color: rgba(0, 0, 0, 0.02);
 }
 
 .faq-button:focus-visible {
-  outline: 2px solid var(--faq-icon-color) !important;
-  outline-offset: -2px;
+  outline: 2px solid var(--faq-border-color, #d1d5db) !important;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .faq-question {
