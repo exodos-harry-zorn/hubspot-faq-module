@@ -21,12 +21,19 @@ jobs:
       - name: Install HubSpot CLI
         run: npm install -g @hubspot/cli
 
-      - name: Deploy Module to HubSpot
+      - name: Generate HubSpot Config
         env:
           HUBSPOT_PERSONAL_ACCESS_TOKEN: ${{ secrets.HUBSPOT_PERSONAL_ACCESS_TOKEN }}
           PORTAL_ID: ${{ secrets.HUBSPOT_PORTAL_ID }}
         run: |
-          # Führt den Upload über die HubSpot CLI durch
-          hs upload "faq.module" "11_Bytes child/modules/static modules/FAQ lean.module" \
-            --portal="$PORTAL_ID" \
-            --token="$HUBSPOT_PERSONAL_ACCESS_TOKEN"
+          cat << EOF > hubspot.config.yml
+          defaultPortal: 'PROD'
+          portals:
+            - name: 'PROD'
+              portalId: $PORTAL_ID
+              personalAccessKey: '$HUBSPOT_PERSONAL_ACCESS_TOKEN'
+          EOF
+
+      - name: Deploy Module to HubSpot
+        run: |
+          hs upload "faq.module" "11_Bytes child/modules/static modules/FAQ lean.module"
