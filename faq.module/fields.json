@@ -12,7 +12,8 @@
         "required": true,
         "locked": false,
         "type": "text",
-        "default": "What is the typical deployment time?"
+        "default": "What is the typical deployment time?",
+        "id": "3698fdcf-0010-43fe-8d46-fac48ceb17c9"
       },
       {
         "name": "answer",
@@ -20,29 +21,16 @@
         "required": true,
         "locked": false,
         "type": "richtext",
-        "default": "Deployment usually takes less than 15 minutes to complete across your entire environment."
+        "default": "Deployment usually takes less than 15 minutes to complete across your entire environment.",
+        "id": "ed2bde18-ae4d-4571-8b1f-4b449a6a9006"
       }
     ],
     "occurrence": {
       "min": null,
       "max": null,
-      "sorting_label_field": "question",
-      "default": 3
+      "sorting_label_field": "question"
     },
-    "default": [
-      {
-        "question": "How quickly can we deploy this solution?",
-        "answer": "Our agentless deployment allows you to scan your entire infrastructure in minutes, not days."
-      },
-      {
-        "question": "Is this suitable for enterprise environments?",
-        "answer": "Yes. Our platform scales automatically to handle millions of workloads and complex, multi-cloud architectures."
-      },
-      {
-        "question": "How does pricing work?",
-        "answer": "Pricing is based on the number of workloads and nodes in your environment. Contact our sales team for a custom quote."
-      }
-    ]
+    "id": "65b22319-f5f1-4ad9-8706-f1b46950af69"
   },
   {
     "name": "design",
@@ -71,7 +59,8 @@
             "value": "box"
           }
         ],
-        "default": "bottom"
+        "default": "bottom",
+        "id": "f18c1152-3f8e-4f35-b1c8-1330cfabae5f"
       },
       {
         "name": "spacing",
@@ -93,7 +82,8 @@
             "value": "relaxed"
           }
         ],
-        "default": "compact"
+        "default": "compact",
+        "id": "caeb217b-1685-471b-9826-3c980bbbe2ec"
       },
       {
         "name": "colors",
@@ -111,7 +101,8 @@
             "default": {
               "color": "#1A1A1A",
               "opacity": 100
-            }
+            },
+            "id": "f87f5012-e710-4035-b912-c87230afc1c2"
           },
           {
             "name": "answer_text",
@@ -122,7 +113,8 @@
             "default": {
               "color": "#4A4A4A",
               "opacity": 100
-            }
+            },
+            "id": "4aaebc6c-7a31-4bf3-8c27-a02430a21cae"
           },
           {
             "name": "border_color",
@@ -133,7 +125,8 @@
             "default": {
               "color": "#D1D5DB",
               "opacity": 100
-            }
+            },
+            "id": "25490e9c-5142-42e1-a601-00b2a362c063"
           },
           {
             "name": "icon_color",
@@ -144,11 +137,14 @@
             "default": {
               "color": "#1A1A1A",
               "opacity": 100
-            }
+            },
+            "id": "ef18e644-a1eb-4982-b5f3-c855873297e9"
           }
-        ]
+        ],
+        "id": "28f5459a-b73f-4d16-8c16-782bfa37758e"
       }
-    ]
+    ],
+    "id": "b30de149-7054-4eb9-a185-1cafc4322dff"
   },
   {
     "name": "seo",
@@ -163,8 +159,10 @@
         "required": false,
         "locked": false,
         "type": "boolean",
-        "default": true
+        "default": true,
+        "id": "23b9bca7-4a23-4487-aa13-08a6e1b9d965"
       }
-    ]
+    ],
+    "id": "e6648221-7608-4dce-af09-ef4a00a9cf8e"
   }
 ]
