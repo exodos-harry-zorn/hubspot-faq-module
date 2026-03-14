@@ -86,7 +86,7 @@
   padding-top: 0;
 }
 
-.faq-button[aria-expanded="true"] + .faq-content {
+.faq-content[aria-hidden="false"] {
   opacity: 1;
 }
 
