@@ -1,6 +1,6 @@
 # HubSpot FAQ Module (B2B SaaS Style)
 
-A super clean, minimalist, and highly configurable HubSpot FAQ module. Designed with best practices used by leading B2B SaaS companies (like Wiz, Snyk, CrowdStrike, and GitLab).
+A super clean, minimalist, and highly configurable HubSpot FAQ module. Designed with best practices used by leading B2B SaaS companies.
 
 ## Features
 - **Configurable Spacing**: Compact, Normal, or Relaxed.
