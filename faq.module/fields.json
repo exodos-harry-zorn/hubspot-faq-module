@@ -1,48 +1,68 @@
 [
   {
-    "id": "64fe7b39-608b-4000-b0d7-0373c217c286",
+    "id": "b24933f0-ca90-4c03-a77b-3ba2f684f7de",
     "name": "faqs",
     "label": "FAQs",
     "required": false,
     "locked": false,
     "type": "group",
     "occurrence": {
+      "min": 1,
+      "max": 50,
       "default": 3
     },
     "children": [
       {
-        "id": "ee4b5670-e964-4239-a13c-af60121ba7e6",
+        "id": "67d8739f-d151-4836-abb4-2d093aa2851e",
         "name": "question",
         "label": "Question",
-        "required": false,
+        "required": true,
         "locked": false,
-        "type": "text"
+        "type": "text",
+        "default": "Enter your question here"
       },
       {
-        "id": "3f0e56a5-00d8-4d4d-a03f-70f941d0006e",
+        "id": "d4b285c7-285b-450c-9128-8fd4e955ecdd",
         "name": "answer",
         "label": "Answer",
-        "required": false,
+        "required": true,
         "locked": false,
-        "type": "richtext"
+        "type": "richtext",
+        "default": "Enter the answer here"
+      }
+    ],
+    "default": [
+      {
+        "question": "What is the typical deployment time?",
+        "answer": "Deployment usually takes less than 15 minutes."
+      },
+      {
+        "question": "Is this suitable for enterprise?",
+        "answer": "Yes. Our platform scales automatically."
+      },
+      {
+        "question": "How does pricing work?",
+        "answer": "Pricing is based on the number of workloads."
       }
     ]
   },
   {
-    "id": "1d443c7e-0d44-410b-9e92-71936cd95c8c",
+    "id": "dcaa59c6-1777-4713-894c-a626a31899b2",
     "name": "design",
     "label": "Design Settings",
     "required": false,
     "locked": false,
     "type": "group",
+    "tab": "STYLE",
     "children": [
       {
-        "id": "10c5932f-2e40-4113-8f0f-2f32eeec2b7e",
+        "id": "808c3d98-7131-475c-b57f-c9a0a24f4526",
         "name": "border_style",
         "label": "Border Style",
         "required": false,
         "locked": false,
         "type": "choice",
+        "display": "select",
         "choices": [
           [
             "none",
@@ -56,15 +76,17 @@
             "box",
             "Full Boxed (Card Style)"
           ]
-        ]
+        ],
+        "default": "bottom"
       },
       {
-        "id": "1f92e1a0-1a54-4871-9b50-2e49066fd033",
+        "id": "f4919739-8be1-42ba-81ba-1d4a578ca4eb",
         "name": "spacing",
         "label": "Spacing (Padding)",
         "required": false,
         "locked": false,
         "type": "choice",
+        "display": "select",
         "choices": [
           [
             "compact",
@@ -78,10 +100,11 @@
             "relaxed",
             "Relaxed (More Spacing)"
           ]
-        ]
+        ],
+        "default": "compact"
       },
       {
-        "id": "9e91393b-45ba-43de-924c-059ae682e225",
+        "id": "88eaa4ab-3759-4062-8ff7-7a2e7f450d17",
         "name": "colors",
         "label": "Colors",
         "required": false,
@@ -89,43 +112,59 @@
         "type": "group",
         "children": [
           {
-            "id": "33aa4a30-ef8c-4707-8cea-5ad2a6719dbe",
+            "id": "7fea94ad-7cc7-4b0e-b4c9-6b24b53d42df",
             "name": "question_text",
             "label": "Question Text Color",
             "required": false,
             "locked": false,
-            "type": "color"
+            "type": "color",
+            "default": {
+              "color": "#1A1A1A",
+              "opacity": 100
+            }
           },
           {
-            "id": "cb33dcf0-e162-4a3b-8785-3024b1a82a42",
+            "id": "86a246db-c385-4869-a736-3f4f8af9c9da",
             "name": "answer_text",
             "label": "Answer Text Color",
             "required": false,
             "locked": false,
-            "type": "color"
+            "type": "color",
+            "default": {
+              "color": "#4A4A4A",
+              "opacity": 100
+            }
           },
           {
-            "id": "8bb700fb-31f9-4407-b3a5-4ef14b56ceff",
+            "id": "f95a7c71-9ded-4951-904d-2bb99e4e0482",
             "name": "border_color",
             "label": "Border Color",
             "required": false,
             "locked": false,
-            "type": "color"
+            "type": "color",
+            "default": {
+              "color": "#D1D5DB",
+              "opacity": 100
+            }
           },
           {
-            "id": "db4843fe-d6ad-497e-8ad9-f7607a622358",
+            "id": "214373e9-b4b4-446f-88b0-d9179f9c7774",
             "name": "icon_color",
             "label": "Icon Color",
             "required": false,
             "locked": false,
-            "type": "color"
+            "type": "color",
+            "default": {
+              "color": "#1A1A1A",
+              "opacity": 100
+            }
           }
         ]
       }
     ]
   },
   {
-    "id": "d5b850a0-0839-4489-8bdb-40c9a02234eb",
+    "id": "870e9ae5-ff18-43fe-a505-11355411ae15",
     "name": "seo",
     "label": "SEO Settings",
     "required": false,
@@ -133,13 +172,14 @@
     "type": "group",
     "children": [
       {
-        "id": "8bdc3e21-bced-4237-b5ce-b4ca8af01d81",
+        "id": "b2a983f9-f873-46fc-9d36-f91d3bf2682f",
         "name": "enable_schema",
         "label": "Enable FAQ Schema Markup (JSON-LD)",
         "required": false,
         "locked": false,
         "type": "boolean",
-        "display": "checkbox"
+        "display": "checkbox",
+        "default": true
       }
     ]
   }
