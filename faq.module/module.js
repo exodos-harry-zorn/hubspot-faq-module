@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
       button.addEventListener("click", () => {
         const isExpanded = button.getAttribute("aria-expanded") === "true";
         const contentId = button.getAttribute("aria-controls");
-        const content = moduleEl.querySelector(`#${contentId}`);
+        const content = document.getElementById(contentId);
+
+        if (!content) return;
 
         // Toggle state
         if (isExpanded) {
