@@ -1,6 +1,5 @@
 [
   {
-    "id": "ffde799f-a88a-4cc8-a4b7-0ec579e3b228",
     "name": "heading_text",
     "label": "Heading Text",
     "required": false,
@@ -9,7 +8,6 @@
     "default": "Frequently Asked Questions"
   },
   {
-    "id": "b24933f0-ca90-4c03-a77b-3ba2f684f7de",
     "name": "faqs",
     "label": "FAQs",
     "required": false,
@@ -18,11 +16,11 @@
     "occurrence": {
       "min": 1,
       "max": 50,
-      "default": 3
+      "default": 3,
+      "sorting_label_field": "question"
     },
     "children": [
       {
-        "id": "67d8739f-d151-4836-abb4-2d093aa2851e",
         "name": "question",
         "label": "Question",
         "required": true,
@@ -31,7 +29,6 @@
         "default": "Enter your question here"
       },
       {
-        "id": "d4b285c7-285b-450c-9128-8fd4e955ecdd",
         "name": "answer",
         "label": "Answer",
         "required": true,
@@ -56,7 +53,6 @@
     ]
   },
   {
-    "id": "5eb3cafd-e849-42a3-af08-b7694e237270",
     "name": "container",
     "label": "Container & Layout",
     "required": false,
@@ -65,7 +61,6 @@
     "tab": "STYLE",
     "children": [
       {
-        "id": "6d42747e-5f8c-4add-aad8-e623169ce687",
         "name": "use_card",
         "label": "Display as 3D Card (Box Shadow & Radius)",
         "required": false,
@@ -75,7 +70,6 @@
         "default": true
       },
       {
-        "id": "8d983eaf-ed2b-4e99-a971-4d8b0aac7a1b",
         "name": "max_width",
         "label": "Maximum Width (px)",
         "required": false,
@@ -86,7 +80,6 @@
         "suffix": "px"
       },
       {
-        "id": "7393d9e6-8a2f-41c1-91e0-38b4eec1ae94",
         "name": "background_color",
         "label": "Card Background Color",
         "required": false,
@@ -98,7 +91,6 @@
         }
       },
       {
-        "id": "ddbfc48f-1599-4739-a23e-3efb69faf51e",
         "name": "module_spacing",
         "label": "Container Padding & Margin",
         "required": false,
@@ -136,7 +128,6 @@
         }
       },
       {
-        "id": "718d010b-f5c4-4892-ae6b-217dfd449116",
         "name": "text_alignment",
         "label": "Text Alignment",
         "required": false,
@@ -166,7 +157,6 @@
     ]
   },
   {
-    "id": "dcaa59c6-1777-4713-894c-a626a31899b2",
     "name": "design",
     "label": "Design Settings",
     "required": false,
@@ -175,7 +165,6 @@
     "tab": "STYLE",
     "children": [
       {
-        "id": "808c3d98-7131-475c-b57f-c9a0a24f4526",
         "name": "border_style",
         "label": "Border Style",
         "required": false,
@@ -199,7 +188,6 @@
         "default": "bottom"
       },
       {
-        "id": "f4919739-8be1-42ba-81ba-1d4a578ca4eb",
         "name": "spacing",
         "label": "FAQ Item Padding",
         "required": false,
@@ -223,7 +211,6 @@
         "default": "compact"
       },
       {
-        "id": "88eaa4ab-3759-4062-8ff7-7a2e7f450d17",
         "name": "colors",
         "label": "Colors",
         "required": false,
@@ -231,7 +218,6 @@
         "type": "group",
         "children": [
           {
-            "id": "7fea94ad-7cc7-4b0e-b4c9-6b24b53d42df",
             "name": "question_text",
             "label": "Question Text Color",
             "required": false,
@@ -243,7 +229,6 @@
             }
           },
           {
-            "id": "86a246db-c385-4869-a736-3f4f8af9c9da",
             "name": "answer_text",
             "label": "Answer Text Color",
             "required": false,
@@ -255,7 +240,6 @@
             }
           },
           {
-            "id": "f95a7c71-9ded-4951-904d-2bb99e4e0482",
             "name": "border_color",
             "label": "Border Color",
             "required": false,
@@ -267,7 +251,6 @@
             }
           },
           {
-            "id": "214373e9-b4b4-446f-88b0-d9179f9c7774",
             "name": "icon_color",
             "label": "Icon Color",
             "required": false,
@@ -283,7 +266,6 @@
     ]
   },
   {
-    "id": "870e9ae5-ff18-43fe-a505-11355411ae15",
     "name": "seo",
     "label": "SEO Settings",
     "required": false,
@@ -291,7 +273,6 @@
     "type": "group",
     "children": [
       {
-        "id": "b2a983f9-f873-46fc-9d36-f91d3bf2682f",
         "name": "enable_schema",
         "label": "Enable FAQ Schema Markup (JSON-LD)",
         "required": false,
@@ -303,7 +284,6 @@
     ]
   },
   {
-    "id": "1c2e19af-0234-4945-878d-7b75971df41f",
     "name": "heading_styles",
     "label": "Heading Styles",
     "required": false,
@@ -312,7 +292,6 @@
     "tab": "STYLE",
     "children": [
       {
-        "id": "a4387e7e-7bd7-4e34-8286-b9a1ba78f57c",
         "name": "tag",
         "label": "Heading Format",
         "required": false,
@@ -352,7 +331,6 @@
         "default": "h2"
       },
       {
-        "id": "00d6c6f5-3376-4d45-bf29-e3fa2a931fe8",
         "name": "alignment",
         "label": "Text Alignment",
         "required": false,
@@ -376,7 +354,6 @@
         "default": "left"
       },
       {
-        "id": "1a3bd67e-e9d5-49d5-9599-3f157e4fcd9f",
         "name": "color",
         "label": "Text Color",
         "required": false,
@@ -388,7 +365,6 @@
         }
       },
       {
-        "id": "b907f32b-4be0-4103-9422-95c372c86901",
         "name": "spacing",
         "label": "Padding & Margin",
         "required": false,
