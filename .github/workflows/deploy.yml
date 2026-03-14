@@ -13,10 +13,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: HubSpot Deploy Action
-        uses: HubSpot/hubspot-cms-deploy-action@v2.0.1
-        with:
-          src_dir: faq.module
-          dest_dir: '11_Bytes child/modules/static modules/FAQ lean.module'
-          account_id: ${{ secrets.HUBSPOT_PORTAL_ID }}
-          personal_access_key: ${{ secrets.HUBSPOT_PERSONAL_ACCESS_TOKEN }}
+      - name: Deploy Module to HubSpot
+        env:
+          HUBSPOT_PORTAL_ID: ${{ secrets.HUBSPOT_PORTAL_ID }}
+          HUBSPOT_PERSONAL_ACCESS_KEY: ${{ secrets.HUBSPOT_PERSONAL_ACCESS_TOKEN }}
+        run: |
+          npx --yes --package=@hubspot/cli@^7 --call='hs upload "faq.module" "11_Bytes child/modules/static modules/FAQ lean.module" --use-env'
