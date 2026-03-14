@@ -55,221 +55,6 @@
     "display_width": null
   },
   {
-    "name": "container",
-    "label": "Container & Layout",
-    "required": false,
-    "locked": false,
-    "type": "group",
-    "children": [
-      {
-        "name": "use_card",
-        "label": "Display as 3D Card (Box Shadow & Radius)",
-        "required": false,
-        "locked": false,
-        "type": "boolean",
-        "display": "checkbox",
-        "default": true
-      },
-      {
-        "name": "max_width",
-        "label": "Maximum Width (px)",
-        "required": false,
-        "locked": false,
-        "type": "number",
-        "default": 800,
-        "display": "text",
-        "suffix": "px"
-      },
-      {
-        "name": "background_color",
-        "label": "Card Background Color",
-        "required": false,
-        "locked": false,
-        "type": "color",
-        "default": {
-          "color": "#ffffff",
-          "opacity": 100
-        }
-      },
-      {
-        "name": "module_spacing",
-        "label": "Container Padding & Margin",
-        "required": false,
-        "locked": false,
-        "type": "spacing",
-        "default": {
-          "padding": {
-            "top": {
-              "value": 32,
-              "units": "px"
-            },
-            "bottom": {
-              "value": 32,
-              "units": "px"
-            },
-            "left": {
-              "value": 40,
-              "units": "px"
-            },
-            "right": {
-              "value": 40,
-              "units": "px"
-            }
-          },
-          "margin": {
-            "top": {
-              "value": 40,
-              "units": "px"
-            },
-            "bottom": {
-              "value": 40,
-              "units": "px"
-            }
-          }
-        }
-      },
-      {
-        "name": "text_alignment",
-        "label": "Text Alignment",
-        "required": false,
-        "locked": false,
-        "type": "choice",
-        "display": "select",
-        "choices": [
-          [
-            "left",
-            "Left"
-          ],
-          [
-            "center",
-            "Center"
-          ],
-          [
-            "right",
-            "Right"
-          ],
-          [
-            "justify",
-            "Justify"
-          ]
-        ],
-        "default": "left"
-      }
-    ],
-    "display_width": null,
-    "tab": "STYLE"
-  },
-  {
-    "name": "design",
-    "label": "Design Settings",
-    "required": false,
-    "locked": false,
-    "type": "group",
-    "children": [
-      {
-        "name": "border_style",
-        "label": "Border Style",
-        "required": false,
-        "locked": false,
-        "type": "choice",
-        "display": "select",
-        "choices": [
-          [
-            "none",
-            "No Lines (Clean Minimal)"
-          ],
-          [
-            "bottom",
-            "Bottom Lines Only (Classic)"
-          ],
-          [
-            "box",
-            "Full Boxed (Card Style)"
-          ]
-        ],
-        "default": "bottom"
-      },
-      {
-        "name": "spacing",
-        "label": "FAQ Item Padding",
-        "required": false,
-        "locked": false,
-        "type": "choice",
-        "display": "select",
-        "choices": [
-          [
-            "compact",
-            "Compact"
-          ],
-          [
-            "normal",
-            "Normal"
-          ],
-          [
-            "relaxed",
-            "Relaxed (More Spacing)"
-          ]
-        ],
-        "default": "compact"
-      },
-      {
-        "name": "colors",
-        "label": "Colors",
-        "required": false,
-        "locked": false,
-        "type": "group",
-        "children": [
-          {
-            "name": "question_text",
-            "label": "Question Text Color",
-            "required": false,
-            "locked": false,
-            "type": "color",
-            "default": {
-              "color": "#1A1A1A",
-              "opacity": 100
-            }
-          },
-          {
-            "name": "answer_text",
-            "label": "Answer Text Color",
-            "required": false,
-            "locked": false,
-            "type": "color",
-            "default": {
-              "color": "#4A4A4A",
-              "opacity": 100
-            }
-          },
-          {
-            "name": "border_color",
-            "label": "Border Color",
-            "required": false,
-            "locked": false,
-            "type": "color",
-            "default": {
-              "color": "#D1D5DB",
-              "opacity": 100
-            }
-          },
-          {
-            "name": "icon_color",
-            "label": "Icon Color",
-            "required": false,
-            "locked": false,
-            "type": "color",
-            "default": {
-              "color": "#1A1A1A",
-              "opacity": 100
-            }
-          }
-        ]
-      }
-    ],
-    "display_width": null,
-    "tab": "STYLE"
-  },
-  {
     "name": "seo",
     "label": "SEO Settings",
     "required": false,
@@ -289,102 +74,322 @@
     "display_width": null
   },
   {
-    "name": "heading_styles",
-    "label": "Heading Styles",
-    "required": false,
-    "locked": false,
+    "name": "styles",
+    "label": "Styles",
     "type": "group",
+    "tab": "STYLE",
     "children": [
       {
-        "name": "tag",
-        "label": "Heading Format",
+        "name": "container",
+        "label": "Container & Layout",
         "required": false,
         "locked": false,
-        "type": "choice",
-        "display": "select",
-        "choices": [
-          [
-            "h1",
-            "H1"
-          ],
-          [
-            "h2",
-            "H2"
-          ],
-          [
-            "h3",
-            "H3"
-          ],
-          [
-            "h4",
-            "H4"
-          ],
-          [
-            "h5",
-            "H5"
-          ],
-          [
-            "h6",
-            "H6"
-          ],
-          [
-            "p",
-            "Paragraph (p)"
-          ]
+        "type": "group",
+        "children": [
+          {
+            "name": "use_card",
+            "label": "Display as 3D Card (Box Shadow & Radius)",
+            "required": false,
+            "locked": false,
+            "type": "boolean",
+            "display": "checkbox",
+            "default": true
+          },
+          {
+            "name": "max_width",
+            "label": "Maximum Width (px)",
+            "required": false,
+            "locked": false,
+            "type": "number",
+            "default": 800,
+            "display": "text",
+            "suffix": "px"
+          },
+          {
+            "name": "background_color",
+            "label": "Card Background Color",
+            "required": false,
+            "locked": false,
+            "type": "color",
+            "default": {
+              "color": "#ffffff",
+              "opacity": 100
+            }
+          },
+          {
+            "name": "module_spacing",
+            "label": "Container Padding & Margin",
+            "required": false,
+            "locked": false,
+            "type": "spacing",
+            "default": {
+              "padding": {
+                "top": {
+                  "value": 32,
+                  "units": "px"
+                },
+                "bottom": {
+                  "value": 32,
+                  "units": "px"
+                },
+                "left": {
+                  "value": 40,
+                  "units": "px"
+                },
+                "right": {
+                  "value": 40,
+                  "units": "px"
+                }
+              },
+              "margin": {
+                "top": {
+                  "value": 40,
+                  "units": "px"
+                },
+                "bottom": {
+                  "value": 40,
+                  "units": "px"
+                }
+              }
+            }
+          },
+          {
+            "name": "text_alignment",
+            "label": "Text Alignment",
+            "required": false,
+            "locked": false,
+            "type": "choice",
+            "display": "select",
+            "choices": [
+              [
+                "left",
+                "Left"
+              ],
+              [
+                "center",
+                "Center"
+              ],
+              [
+                "right",
+                "Right"
+              ],
+              [
+                "justify",
+                "Justify"
+              ]
+            ],
+            "default": "left"
+          }
         ],
-        "default": "h2"
+        "display_width": null
       },
       {
-        "name": "alignment",
-        "label": "Text Alignment",
+        "name": "design",
+        "label": "Design Settings",
         "required": false,
         "locked": false,
-        "type": "choice",
-        "display": "select",
-        "choices": [
-          [
-            "left",
-            "Left"
-          ],
-          [
-            "center",
-            "Center"
-          ],
-          [
-            "right",
-            "Right"
-          ]
+        "type": "group",
+        "children": [
+          {
+            "name": "border_style",
+            "label": "Border Style",
+            "required": false,
+            "locked": false,
+            "type": "choice",
+            "display": "select",
+            "choices": [
+              [
+                "none",
+                "No Lines (Clean Minimal)"
+              ],
+              [
+                "bottom",
+                "Bottom Lines Only (Classic)"
+              ],
+              [
+                "box",
+                "Full Boxed (Card Style)"
+              ]
+            ],
+            "default": "bottom"
+          },
+          {
+            "name": "spacing",
+            "label": "FAQ Item Padding",
+            "required": false,
+            "locked": false,
+            "type": "choice",
+            "display": "select",
+            "choices": [
+              [
+                "compact",
+                "Compact"
+              ],
+              [
+                "normal",
+                "Normal"
+              ],
+              [
+                "relaxed",
+                "Relaxed (More Spacing)"
+              ]
+            ],
+            "default": "compact"
+          },
+          {
+            "name": "colors",
+            "label": "Colors",
+            "required": false,
+            "locked": false,
+            "type": "group",
+            "children": [
+              {
+                "name": "question_text",
+                "label": "Question Text Color",
+                "required": false,
+                "locked": false,
+                "type": "color",
+                "default": {
+                  "color": "#1A1A1A",
+                  "opacity": 100
+                }
+              },
+              {
+                "name": "answer_text",
+                "label": "Answer Text Color",
+                "required": false,
+                "locked": false,
+                "type": "color",
+                "default": {
+                  "color": "#4A4A4A",
+                  "opacity": 100
+                }
+              },
+              {
+                "name": "border_color",
+                "label": "Border Color",
+                "required": false,
+                "locked": false,
+                "type": "color",
+                "default": {
+                  "color": "#D1D5DB",
+                  "opacity": 100
+                }
+              },
+              {
+                "name": "icon_color",
+                "label": "Icon Color",
+                "required": false,
+                "locked": false,
+                "type": "color",
+                "default": {
+                  "color": "#1A1A1A",
+                  "opacity": 100
+                }
+              }
+            ]
+          }
         ],
-        "default": "left"
+        "display_width": null
       },
       {
-        "name": "color",
-        "label": "Text Color",
+        "name": "heading_styles",
+        "label": "Heading Styles",
         "required": false,
         "locked": false,
-        "type": "color",
-        "default": {
-          "color": "#1a1a1a",
-          "opacity": 100
-        }
-      },
-      {
-        "name": "spacing",
-        "label": "Padding & Margin",
-        "required": false,
-        "locked": false,
-        "type": "spacing",
-        "default": {
-          "margin": {
-            "bottom": {
-              "value": 24,
-              "units": "px"
+        "type": "group",
+        "children": [
+          {
+            "name": "tag",
+            "label": "Heading Format",
+            "required": false,
+            "locked": false,
+            "type": "choice",
+            "display": "select",
+            "choices": [
+              [
+                "h1",
+                "H1"
+              ],
+              [
+                "h2",
+                "H2"
+              ],
+              [
+                "h3",
+                "H3"
+              ],
+              [
+                "h4",
+                "H4"
+              ],
+              [
+                "h5",
+                "H5"
+              ],
+              [
+                "h6",
+                "H6"
+              ],
+              [
+                "p",
+                "Paragraph (p)"
+              ]
+            ],
+            "default": "h2"
+          },
+          {
+            "name": "alignment",
+            "label": "Text Alignment",
+            "required": false,
+            "locked": false,
+            "type": "choice",
+            "display": "select",
+            "choices": [
+              [
+                "left",
+                "Left"
+              ],
+              [
+                "center",
+                "Center"
+              ],
+              [
+                "right",
+                "Right"
+              ]
+            ],
+            "default": "left"
+          },
+          {
+            "name": "color",
+            "label": "Text Color",
+            "required": false,
+            "locked": false,
+            "type": "color",
+            "default": {
+              "color": "#1a1a1a",
+              "opacity": 100
+            }
+          },
+          {
+            "name": "spacing",
+            "label": "Padding & Margin",
+            "required": false,
+            "locked": false,
+            "type": "spacing",
+            "default": {
+              "margin": {
+                "bottom": {
+                  "value": 24,
+                  "units": "px"
+                }
+              }
             }
           }
-        }
+        ],
+        "display_width": null
       }
-    ],
-    "display_width": null,
-    "tab": "STYLE"
+    ]
   }
 ]
