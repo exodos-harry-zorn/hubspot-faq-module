@@ -51,6 +51,20 @@
   }
   {% endif %}
 
+  
+  {% if design.fonts.question_font.font %}
+  .hs-faq-container-{{ name }} .faq-question {
+    {{ design.fonts.question_font.css }}
+  }
+  {% endif %}
+
+  {% if design.fonts.answer_font.font %}
+  .hs-faq-container-{{ name }} .faq-answer-inner,
+  .hs-faq-container-{{ name }} .faq-answer-inner * {
+    {{ design.fonts.answer_font.css }}
+  }
+  {% endif %}
+
   /* Responsive Adjustments for Mobile */
   @media (max-width: 768px) {
     .hs-faq-container-{{ name }} {

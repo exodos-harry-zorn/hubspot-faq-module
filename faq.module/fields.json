@@ -198,6 +198,14 @@
             "type": "group",
             "children": [
               {
+                "name": "font",
+                "label": "Heading Font",
+                "required": false,
+                "locked": false,
+                "type": "font",
+                "load_external_fonts": true
+              },
+              {
                 "name": "tag",
                 "label": "Heading Format",
                 "required": false,
@@ -384,6 +392,31 @@
                   "color": "#1A1A1A",
                   "opacity": 100
                 }
+              }
+            ]
+          },
+          {
+            "name": "fonts",
+            "label": "Typography (Questions & Answers)",
+            "required": false,
+            "locked": false,
+            "type": "group",
+            "children": [
+              {
+                "name": "question_font",
+                "label": "Question Font",
+                "required": false,
+                "locked": false,
+                "type": "font",
+                "load_external_fonts": true
+              },
+              {
+                "name": "answer_font",
+                "label": "Answer Font",
+                "required": false,
+                "locked": false,
+                "type": "font",
+                "load_external_fonts": true
               }
             ]
           }
