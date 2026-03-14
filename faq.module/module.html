@@ -1,37 +1,82 @@
 {% set design = module.design %}
+{% set container = module.container %}
 {% set seo = module.seo %}
 {% set faqs = module.faqs %}
 
-<div class="hs-faq-module faq-style-{{ design.border_style }} faq-spacing-{{ design.spacing }}" 
-     style="
-       --faq-q-color: {{ design.colors.question_text.color }};
-       --faq-a-color: {{ design.colors.answer_text.color }};
-       --faq-border-color: {{ design.colors.border_color.color }};
-       --faq-icon-color: {{ design.colors.icon_color.color }};
-     ">
-  
-  <div class="faq-accordion" role="presentation">
-    {% for faq in faqs %}
-      <div class="faq-item">
-        <h3>
-          <button class="faq-button" aria-expanded="false" aria-controls="faq-content-{{ loop.index }}">
-            <span class="faq-question">{{ faq.question }}</span>
-            <span class="faq-icon" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
-            </span>
-          </button>
-        </h3>
-        <div id="faq-content-{{ loop.index }}" class="faq-content" aria-hidden="true" style="max-height: 0px;">
-          <div class="faq-answer-inner">
-            {{ faq.answer }}
+{% require_css %}
+<style>
+  .hs-faq-container-{{ name }} {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    
+    /* Layout & Width */
+    max-width: {{ container.max_width|escape|default('800px') }};
+    
+    /* Margin overrides (horizontal is auto to center) */
+    {% if container.module_spacing.margin.top %}margin-top: {{ container.module_spacing.margin.top.value }}{{ container.module_spacing.margin.top.units }};{% else %}margin-top: 40px;{% endif %}
+    {% if container.module_spacing.margin.bottom %}margin-bottom: {{ container.module_spacing.margin.bottom.value }}{{ container.module_spacing.margin.bottom.units }};{% else %}margin-bottom: 40px;{% endif %}
+    
+    /* Internal Padding */
+    {% if container.module_spacing.padding.top %}padding-top: {{ container.module_spacing.padding.top.value }}{{ container.module_spacing.padding.top.units }};{% else %}padding-top: 32px;{% endif %}
+    {% if container.module_spacing.padding.bottom %}padding-bottom: {{ container.module_spacing.padding.bottom.value }}{{ container.module_spacing.padding.bottom.units }};{% else %}padding-bottom: 32px;{% endif %}
+    {% if container.module_spacing.padding.left %}padding-left: {{ container.module_spacing.padding.left.value }}{{ container.module_spacing.padding.left.units }};{% else %}padding-left: 40px;{% endif %}
+    {% if container.module_spacing.padding.right %}padding-right: {{ container.module_spacing.padding.right.value }}{{ container.module_spacing.padding.right.units }};{% else %}padding-right: 40px;{% endif %}
+    
+    /* Card / 3D Look */
+    {% if container.use_card %}
+      background-color: {{ container.background_color.color|default('#ffffff') }};
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    {% endif %}
+  }
+
+  /* Responsive Adjustments for Mobile */
+  @media (max-width: 768px) {
+    .hs-faq-container-{{ name }} {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+      padding-top: 24px !important;
+      padding-bottom: 24px !important;
+      border-radius: 8px !important;
+    }
+  }
+</style>
+{% end_require_css %}
+
+<div class="hs-faq-container-{{ name }}">
+  <div class="hs-faq-module faq-style-{{ design.border_style }} faq-spacing-{{ design.spacing }}" 
+       style="
+         --faq-q-color: {{ design.colors.question_text.color }};
+         --faq-a-color: {{ design.colors.answer_text.color }};
+         --faq-border-color: {{ design.colors.border_color.color }};
+         --faq-icon-color: {{ design.colors.icon_color.color }};
+       ">
+    
+    <div class="faq-accordion" role="presentation">
+      {% for faq in faqs %}
+        <div class="faq-item">
+          <h3>
+            <button class="faq-button" aria-expanded="false" aria-controls="faq-content-{{ name }}-{{ loop.index }}">
+              <span class="faq-question">{{ faq.question }}</span>
+              <span class="faq-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </span>
+            </button>
+          </h3>
+          <div id="faq-content-{{ name }}-{{ loop.index }}" class="faq-content" aria-hidden="true" style="max-height: 0px;">
+            <div class="faq-answer-inner">
+              {{ faq.answer }}
+            </div>
           </div>
         </div>
-      </div>
-    {% endfor %}
-  </div>
+      {% endfor %}
+    </div>
 
+  </div>
 </div>
 
 {% if seo.enable_schema and faqs|length > 0 %}

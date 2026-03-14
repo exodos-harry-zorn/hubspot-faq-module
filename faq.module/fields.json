@@ -47,6 +47,86 @@
     ]
   },
   {
+    "id": "5eb3cafd-e849-42a3-af08-b7694e237270",
+    "name": "container",
+    "label": "Container & Layout",
+    "required": false,
+    "locked": false,
+    "type": "group",
+    "tab": "STYLE",
+    "children": [
+      {
+        "id": "6d42747e-5f8c-4add-aad8-e623169ce687",
+        "name": "use_card",
+        "label": "Display as 3D Card (Box Shadow & Radius)",
+        "required": false,
+        "locked": false,
+        "type": "boolean",
+        "display": "checkbox",
+        "default": true
+      },
+      {
+        "id": "8d983eaf-ed2b-4e99-a971-4d8b0aac7a1b",
+        "name": "max_width",
+        "label": "Maximum Width (e.g. 800px, 100%, 40rem)",
+        "required": false,
+        "locked": false,
+        "type": "text",
+        "default": "800px"
+      },
+      {
+        "id": "7393d9e6-8a2f-41c1-91e0-38b4eec1ae94",
+        "name": "background_color",
+        "label": "Card Background Color",
+        "required": false,
+        "locked": false,
+        "type": "color",
+        "default": {
+          "color": "#ffffff",
+          "opacity": 100
+        }
+      },
+      {
+        "id": "ddbfc48f-1599-4739-a23e-3efb69faf51e",
+        "name": "module_spacing",
+        "label": "Container Padding & Margin",
+        "required": false,
+        "locked": false,
+        "type": "spacing",
+        "default": {
+          "padding": {
+            "top": {
+              "value": 32,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 32,
+              "units": "px"
+            },
+            "left": {
+              "value": 40,
+              "units": "px"
+            },
+            "right": {
+              "value": 40,
+              "units": "px"
+            }
+          },
+          "margin": {
+            "top": {
+              "value": 40,
+              "units": "px"
+            },
+            "bottom": {
+              "value": 40,
+              "units": "px"
+            }
+          }
+        }
+      }
+    ]
+  },
+  {
     "id": "dcaa59c6-1777-4713-894c-a626a31899b2",
     "name": "design",
     "label": "Design Settings",
@@ -82,7 +162,7 @@
       {
         "id": "f4919739-8be1-42ba-81ba-1d4a578ca4eb",
         "name": "spacing",
-        "label": "Spacing (Padding)",
+        "label": "FAQ Item Padding",
         "required": false,
         "locked": false,
         "type": "choice",
