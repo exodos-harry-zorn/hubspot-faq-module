@@ -2,11 +2,10 @@
 
 .hs-faq-module {
   --faq-transition: 0.3s ease-out;
-  --faq-padding: 1.5rem 0; /* Normal Default */
-  font-family: inherit; /* Uses theme font */
+  --faq-padding: 1rem 0; /* Default to compact */
+  font-family: inherit;
 }
 
-/* Structural Styles */
 .faq-accordion {
   display: flex;
   flex-direction: column;
@@ -21,12 +20,11 @@
 .faq-item h3 {
   margin: 0;
   padding: 0;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 1.5;
 }
 
-/* Accordion Buttons */
 .faq-button {
   width: 100%;
   display: flex;
@@ -45,12 +43,12 @@
 }
 
 .faq-button:hover {
-  opacity: 0.8;
+  opacity: 0.7;
 }
 
 .faq-button:focus-visible {
   outline: 2px solid var(--faq-icon-color);
-  outline-offset: 4px;
+  outline-offset: -2px;
 }
 
 .faq-question {
@@ -58,61 +56,58 @@
   padding-right: 1.5rem;
 }
 
-/* Plus/Minus Icon SVG Animation */
+/* Chevron Icon */
 .faq-icon {
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
-  color: var(--faq-icon-color, #3B82F6);
+  width: 20px;
+  height: 20px;
+  color: var(--faq-icon-color, #1a1a1a);
   transition: transform var(--faq-transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .faq-button[aria-expanded="true"] .faq-icon {
-  transform: rotate(45deg);
+  transform: rotate(90deg);
 }
 
-/* Accordion Content (Transition) */
 .faq-content {
   overflow: hidden;
   transition: max-height var(--faq-transition), opacity var(--faq-transition);
   opacity: 0;
   color: var(--faq-a-color, #4A4A4A);
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.6;
 }
 
-/* The inner wrap allows us to pad the content without breaking max-height transitions */
 .faq-answer-inner {
   padding-bottom: var(--faq-padding);
   padding-top: 0;
 }
 
-/* When expanded */
 .faq-button[aria-expanded="true"] + .faq-content {
   opacity: 1;
 }
 
-/* --- Style Combinations --- */
-
-/* 1. Border Settings */
+/* --- Border Styles --- */
 .faq-style-none .faq-item {
   border: none;
 }
 
 .faq-style-bottom .faq-item {
-  border-bottom: 1px solid var(--faq-border-color, #E5E7EB);
+  border-bottom: 1px solid var(--faq-border-color, #d1d5db);
 }
-.faq-style-bottom .faq-item:last-child {
-  border-bottom: none;
+.faq-style-bottom .faq-item:first-child {
+  border-top: 1px solid var(--faq-border-color, #d1d5db);
 }
 
 .faq-style-box .faq-accordion {
   gap: 1rem;
 }
 .faq-style-box .faq-item {
-  border: 1px solid var(--faq-border-color, #E5E7EB);
+  border: 1px solid var(--faq-border-color, #d1d5db);
   border-radius: 8px;
-  background-color: #fff; /* Could be customized, keeping crisp white for SaaS */
 }
 .faq-style-box .faq-button {
   padding: var(--faq-padding) 1.5rem;
@@ -121,24 +116,12 @@
   padding: 0 1.5rem var(--faq-padding) 1.5rem;
 }
 
-/* 2. Spacing Settings */
-.faq-spacing-compact {
-  --faq-padding: 1rem 0;
-}
-.faq-style-box.faq-spacing-compact {
-  --faq-padding: 1rem;
-}
+/* --- Spacing --- */
+.faq-spacing-compact { --faq-padding: 1rem 0; }
+.faq-style-box.faq-spacing-compact { --faq-padding: 1rem; }
 
-.faq-spacing-normal {
-  --faq-padding: 1.5rem 0;
-}
-.faq-style-box.faq-spacing-normal {
-  --faq-padding: 1.5rem;
-}
+.faq-spacing-normal { --faq-padding: 1.5rem 0; }
+.faq-style-box.faq-spacing-normal { --faq-padding: 1.5rem; }
 
-.faq-spacing-relaxed {
-  --faq-padding: 2rem 0;
-}
-.faq-style-box.faq-spacing-relaxed {
-  --faq-padding: 2rem;
-}
+.faq-spacing-relaxed { --faq-padding: 2rem 0; }
+.faq-style-box.faq-spacing-relaxed { --faq-padding: 2rem; }

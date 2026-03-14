@@ -58,9 +58,18 @@
         "locked": false,
         "type": "choice",
         "choices": [
-          { "label": "No Lines (Clean Minimal)", "value": "none" },
-          { "label": "Bottom Lines Only (Classic)", "value": "bottom" },
-          { "label": "Full Boxed (Card Style)", "value": "box" }
+          {
+            "label": "No Lines (Clean Minimal)",
+            "value": "none"
+          },
+          {
+            "label": "Bottom Lines Only (Classic)",
+            "value": "bottom"
+          },
+          {
+            "label": "Full Boxed (Card Style)",
+            "value": "box"
+          }
         ],
         "default": "bottom"
       },
@@ -71,11 +80,20 @@
         "locked": false,
         "type": "choice",
         "choices": [
-          { "label": "Compact", "value": "compact" },
-          { "label": "Normal", "value": "normal" },
-          { "label": "Relaxed (More Spacing)", "value": "relaxed" }
+          {
+            "label": "Compact",
+            "value": "compact"
+          },
+          {
+            "label": "Normal",
+            "value": "normal"
+          },
+          {
+            "label": "Relaxed (More Spacing)",
+            "value": "relaxed"
+          }
         ],
-        "default": "normal"
+        "default": "compact"
       },
       {
         "name": "colors",
@@ -90,7 +108,10 @@
             "required": false,
             "locked": false,
             "type": "color",
-            "default": { "color": "#1A1A1A", "opacity": 100 }
+            "default": {
+              "color": "#1A1A1A",
+              "opacity": 100
+            }
           },
           {
             "name": "answer_text",
@@ -98,7 +119,10 @@
             "required": false,
             "locked": false,
             "type": "color",
-            "default": { "color": "#4A4A4A", "opacity": 100 }
+            "default": {
+              "color": "#4A4A4A",
+              "opacity": 100
+            }
           },
           {
             "name": "border_color",
@@ -106,7 +130,10 @@
             "required": false,
             "locked": false,
             "type": "color",
-            "default": { "color": "#E5E7EB", "opacity": 100 }
+            "default": {
+              "color": "#D1D5DB",
+              "opacity": 100
+            }
           },
           {
             "name": "icon_color",
@@ -114,7 +141,10 @@
             "required": false,
             "locked": false,
             "type": "color",
-            "default": { "color": "#3B82F6", "opacity": 100 }
+            "default": {
+              "color": "#1A1A1A",
+              "opacity": 100
+            }
           }
         ]
       }
