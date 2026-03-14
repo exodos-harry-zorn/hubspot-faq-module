@@ -60,7 +60,6 @@
     "required": false,
     "locked": false,
     "type": "group",
-    "tab": "STYLE",
     "children": [
       {
         "name": "use_card",
@@ -165,7 +164,6 @@
     "required": false,
     "locked": false,
     "type": "group",
-    "tab": "STYLE",
     "children": [
       {
         "name": "border_style",
@@ -294,7 +292,6 @@
     "required": false,
     "locked": false,
     "type": "group",
-    "tab": "STYLE",
     "children": [
       {
         "name": "tag",
