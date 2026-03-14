@@ -156,7 +156,8 @@
         "default": "left"
       }
     ],
-    "display_width": null
+    "display_width": null,
+    "tab": "STYLE"
   },
   {
     "name": "design",
@@ -265,7 +266,8 @@
         ]
       }
     ],
-    "display_width": null
+    "display_width": null,
+    "tab": "STYLE"
   },
   {
     "name": "seo",
@@ -382,6 +384,7 @@
         }
       }
     ],
-    "display_width": null
+    "display_width": null,
+    "tab": "STYLE"
   }
 ]
