@@ -4,7 +4,7 @@
   --faq-transition: 0.3s ease-out;
   --faq-padding: 1rem 0; /* Default to compact */
   font-family: inherit;
-  text-align: left;
+  text-align: var(--faq-text-align, left) !important;
 }
 
 .faq-accordion {
@@ -24,6 +24,7 @@
   font-size: 1.05rem;
   font-weight: 600;
   line-height: 1.5;
+  text-align: var(--faq-text-align, left) !important;
 }
 
 .faq-button {
@@ -35,7 +36,7 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  text-align: left;
+  text-align: var(--faq-text-align, left) !important;
   color: var(--faq-q-color, #1a1a1a);
   font-family: inherit;
   font-size: inherit;
@@ -66,6 +67,7 @@
 .faq-question {
   flex: 1;
   padding-right: 1.5rem;
+  text-align: var(--faq-text-align, left) !important;
 }
 
 /* Chevron Icon */
@@ -97,11 +99,11 @@
 .faq-answer-inner {
   padding-bottom: var(--faq-padding);
   padding-top: 0;
-  text-align: left;
+  text-align: var(--faq-text-align, left) !important;
 }
 
-.faq-answer-inner p {
-  text-align: left;
+.faq-answer-inner * {
+  text-align: var(--faq-text-align, left) !important;
 }
 
 .hs-faq-module .faq-content[aria-hidden="false"] {

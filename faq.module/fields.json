@@ -125,6 +125,34 @@
             }
           }
         }
+      },
+      {
+        "id": "718d010b-f5c4-4892-ae6b-217dfd449116",
+        "name": "text_alignment",
+        "label": "Text Alignment",
+        "required": false,
+        "locked": false,
+        "type": "choice",
+        "display": "select",
+        "choices": [
+          [
+            "left",
+            "Left"
+          ],
+          [
+            "center",
+            "Center"
+          ],
+          [
+            "right",
+            "Right"
+          ],
+          [
+            "justify",
+            "Justify"
+          ]
+        ],
+        "default": "left"
       }
     ]
   },
