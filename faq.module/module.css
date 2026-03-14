@@ -2,7 +2,8 @@
 
 .hs-faq-module {
   --faq-transition: 0.3s ease-out;
-  --faq-padding: 1rem 0; /* Default to compact */
+  --faq-pad-v: 1rem;
+  --faq-pad-h: 0;
   font-family: inherit;
   text-align: var(--faq-text-align, left) !important;
 }
@@ -32,7 +33,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--faq-padding);
+  padding: var(--faq-pad-v) var(--faq-pad-h);
   background: transparent;
   border: none;
   cursor: pointer;
@@ -97,7 +98,9 @@
 }
 
 .faq-answer-inner {
-  padding-bottom: var(--faq-padding);
+  padding-bottom: var(--faq-pad-v);
+  padding-left: var(--faq-pad-h);
+  padding-right: var(--faq-pad-h);
   padding-top: 0;
   text-align: var(--faq-text-align, left) !important;
 }
@@ -130,19 +133,12 @@
   border: 1px solid var(--faq-border-color, #d1d5db);
   border-radius: 8px;
 }
-.faq-style-box .faq-button {
-  padding: var(--faq-padding) 1.5rem;
-}
-.faq-style-box .faq-answer-inner {
-  padding: 0 1.5rem var(--faq-padding) 1.5rem;
-}
+
+
 
 /* --- Spacing --- */
-.faq-spacing-compact { --faq-padding: 1rem 0; }
-.faq-style-box.faq-spacing-compact { --faq-padding: 1rem; }
+.faq-spacing-compact { --faq-pad-v: 1rem; }
+.faq-spacing-normal { --faq-pad-v: 1.5rem; }
+.faq-spacing-relaxed { --faq-pad-v: 2rem; }
 
-.faq-spacing-normal { --faq-padding: 1.5rem 0; }
-.faq-style-box.faq-spacing-normal { --faq-padding: 1.5rem; }
-
-.faq-spacing-relaxed { --faq-padding: 2rem 0; }
-.faq-style-box.faq-spacing-relaxed { --faq-padding: 2rem; }
+.faq-style-box { --faq-pad-h: 1.5rem; }
