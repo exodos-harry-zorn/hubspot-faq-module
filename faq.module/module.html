@@ -46,12 +46,12 @@
 {% end_require_css %}
 
 <div class="hs-faq-container-{{ name }}">
-  <div class="hs-faq-module faq-style-{{ design.border_style }} faq-spacing-{{ design.spacing }}" 
+  <div class="hs-faq-module faq-style-{{ design.border_style|default('bottom') }} faq-spacing-{{ design.spacing|default('compact') }}" 
        style="
-         --faq-q-color: {{ design.colors.question_text.color }};
-         --faq-a-color: {{ design.colors.answer_text.color }};
-         --faq-border-color: {{ design.colors.border_color.color }};
-         --faq-icon-color: {{ design.colors.icon_color.color }};
+         --faq-q-color: {{ design.colors.question_text.color|default('#1a1a1a') }};
+         --faq-a-color: {{ design.colors.answer_text.color|default('#4A4A4A') }};
+         --faq-border-color: {{ design.colors.border_color.color|default('#d1d5db') }};
+         --faq-icon-color: {{ design.colors.icon_color.color|default('#1a1a1a') }};
        ">
     
     <div class="faq-accordion" role="presentation">

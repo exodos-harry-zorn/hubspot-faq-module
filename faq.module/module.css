@@ -76,6 +76,7 @@
   overflow: hidden;
   transition: max-height var(--faq-transition), opacity var(--faq-transition);
   opacity: 0;
+  visibility: hidden;
   color: var(--faq-a-color, #4A4A4A);
   font-size: 0.95rem;
   line-height: 1.6;
@@ -86,8 +87,9 @@
   padding-top: 0;
 }
 
-.faq-content[aria-hidden="false"] {
-  opacity: 1;
+.hs-faq-module .faq-content[aria-hidden="false"] {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 /* --- Border Styles --- */
